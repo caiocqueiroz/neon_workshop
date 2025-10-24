@@ -5,7 +5,7 @@
 
 1. Clone esse repositorio localmente no seu computador e abra o Visual Studio Code a partir do repositorio clonado. Garanta que voce tenha o Python 3.13 + PIP instalado no seu computador.
 
-2. Create a virtual environment and inicie ele.
+2. Crie um virtual environment do Python e inicie ele. Comandos abaixo:
     ```
     python3 -m venv venv
     source venv/bin/activate
