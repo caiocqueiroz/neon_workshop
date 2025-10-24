@@ -12,9 +12,7 @@ class InvoiceSignalTestCase(TestCase):
     """Tests for invoice signal handlers"""
 
     def setUp(self):
-        self.session = AcademicSession.objects.create(
-            name="2024/2025", current=True
-        )
+        self.session = AcademicSession.objects.create(name="2024/2025", current=True)
         self.term1 = AcademicTerm.objects.create(name="First Term", current=True)
         self.term2 = AcademicTerm.objects.create(name="Second Term", current=False)
         self.student_class = StudentClass.objects.create(name="Grade 1")
@@ -58,12 +56,8 @@ class InvoiceSignalTestCase(TestCase):
             term=self.term1,
             class_for=self.student_class,
         )
-        InvoiceItem.objects.create(
-            invoice=invoice1, description="Tuition", amount=1000
-        )
-        InvoiceItem.objects.create(
-            invoice=invoice1, description="Books", amount=200
-        )
+        InvoiceItem.objects.create(invoice=invoice1, description="Tuition", amount=1000)
+        InvoiceItem.objects.create(invoice=invoice1, description="Books", amount=200)
         Receipt.objects.create(invoice=invoice1, amount_paid=500)
 
         # Balance should be 700 (1200 - 500)
@@ -129,9 +123,7 @@ class InvoiceViewTestCase(TestCase):
         self.user = User.objects.create_user(
             username="testuser", password="testpass123"
         )
-        self.session = AcademicSession.objects.create(
-            name="2024/2025", current=True
-        )
+        self.session = AcademicSession.objects.create(name="2024/2025", current=True)
         self.term = AcademicTerm.objects.create(name="First Term", current=True)
         self.student_class = StudentClass.objects.create(name="Grade 1")
         self.student = Student.objects.create(
@@ -180,9 +172,7 @@ class InvoiceViewTestCase(TestCase):
             term=self.term,
             class_for=self.student_class,
         )
-        InvoiceItem.objects.create(
-            invoice=invoice, description="Tuition", amount=1000
-        )
+        InvoiceItem.objects.create(invoice=invoice, description="Tuition", amount=1000)
         Receipt.objects.create(invoice=invoice, amount_paid=500)
 
         response = self.client.get(reverse("invoice-detail", kwargs={"pk": invoice.pk}))
@@ -201,9 +191,7 @@ class InvoiceViewTestCase(TestCase):
             term=self.term,
             class_for=self.student_class,
         )
-        response = self.client.get(
-            reverse("receipt-create") + f"?invoice={invoice.pk}"
-        )
+        response = self.client.get(reverse("receipt-create") + f"?invoice={invoice.pk}")
         self.assertEqual(response.status_code, 200)
         self.assertIn("invoice", response.context)
         self.assertEqual(response.context["invoice"], invoice)
@@ -225,9 +213,7 @@ class InvoiceModelTestCase(TestCase):
     """Tests for invoice model methods"""
 
     def setUp(self):
-        self.session = AcademicSession.objects.create(
-            name="2024/2025", current=True
-        )
+        self.session = AcademicSession.objects.create(name="2024/2025", current=True)
         self.term = AcademicTerm.objects.create(name="First Term", current=True)
         self.student_class = StudentClass.objects.create(name="Grade 1")
         self.student = Student.objects.create(
@@ -246,9 +232,7 @@ class InvoiceModelTestCase(TestCase):
             class_for=self.student_class,
             balance_from_previous_term=100,
         )
-        InvoiceItem.objects.create(
-            invoice=invoice, description="Tuition", amount=1000
-        )
+        InvoiceItem.objects.create(invoice=invoice, description="Tuition", amount=1000)
         InvoiceItem.objects.create(invoice=invoice, description="Books", amount=200)
         Receipt.objects.create(invoice=invoice, amount_paid=500)
 

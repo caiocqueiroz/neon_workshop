@@ -16,9 +16,7 @@ class ResultCreateViewTestCase(TestCase):
         self.user = User.objects.create_user(
             username="testuser", password="testpass123"
         )
-        self.session = AcademicSession.objects.create(
-            name="2024/2025", current=True
-        )
+        self.session = AcademicSession.objects.create(name="2024/2025", current=True)
         self.term = AcademicTerm.objects.create(name="First Term", current=True)
         self.student_class = StudentClass.objects.create(name="Grade 1")
         self.subject1 = Subject.objects.create(name="Mathematics-Create")
@@ -77,9 +75,7 @@ class ResultCreateViewTestCase(TestCase):
         response = self.client.post(reverse("create-result"), {})
         self.assertEqual(response.status_code, 200)
         messages = list(response.context["messages"])
-        self.assertTrue(
-            any("didnt select any student" in str(m) for m in messages)
-        )
+        self.assertTrue(any("didnt select any student" in str(m) for m in messages))
 
     def test_create_result_final_step_creates_results(self):
         """Test final step creates results for selected students and subjects"""
@@ -167,12 +163,8 @@ class ResultCreateViewTestCase(TestCase):
 
         # Should only create result for student1
         self.assertEqual(Result.objects.count(), 1)
-        self.assertTrue(
-            Result.objects.filter(student=self.student1).exists()
-        )
-        self.assertFalse(
-            Result.objects.filter(student=student_no_class).exists()
-        )
+        self.assertTrue(Result.objects.filter(student=self.student1).exists())
+        self.assertFalse(Result.objects.filter(student=student_no_class).exists())
 
 
 class ResultEditViewTestCase(TestCase):
@@ -182,9 +174,7 @@ class ResultEditViewTestCase(TestCase):
         self.user = User.objects.create_user(
             username="testuser", password="testpass123"
         )
-        self.session = AcademicSession.objects.create(
-            name="2024/2025", current=True
-        )
+        self.session = AcademicSession.objects.create(name="2024/2025", current=True)
         self.term = AcademicTerm.objects.create(name="First Term", current=True)
         self.student_class = StudentClass.objects.create(name="Grade 1 Edit")
         self.subject = Subject.objects.create(name="Mathematics-Edit")
@@ -262,9 +252,7 @@ class ResultEditViewTestCase(TestCase):
         )
 
         messages = list(response.context["messages"])
-        self.assertTrue(
-            any("successfully updated" in str(m).lower() for m in messages)
-        )
+        self.assertTrue(any("successfully updated" in str(m).lower() for m in messages))
 
 
 class ResultListViewTestCase(TestCase):
@@ -275,9 +263,7 @@ class ResultListViewTestCase(TestCase):
         self.user = User.objects.create_user(
             username="testuser", password="testpass123"
         )
-        self.session = AcademicSession.objects.create(
-            name="2024/2025", current=True
-        )
+        self.session = AcademicSession.objects.create(name="2024/2025", current=True)
         self.term = AcademicTerm.objects.create(name="First Term", current=True)
         self.student_class = StudentClass.objects.create(name="Grade 1 List")
         self.subject1 = Subject.objects.create(name="Mathematics-List")
@@ -398,9 +384,7 @@ class ResultModelTestCase(TestCase):
     """Tests for result model methods"""
 
     def setUp(self):
-        self.session = AcademicSession.objects.create(
-            name="2024/2025", current=True
-        )
+        self.session = AcademicSession.objects.create(name="2024/2025", current=True)
         self.term = AcademicTerm.objects.create(name="First Term", current=True)
         self.student_class = StudentClass.objects.create(name="Grade 1 Model")
         self.subject = Subject.objects.create(name="Mathematics-Model")
