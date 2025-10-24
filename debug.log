@@ -449,3 +449,33 @@ INFO 2022-01-07 23:09:30,424 "GET /result/view/all HTTP/1.1" 200 10295
 INFO 2022-01-07 23:09:39,427 "GET / HTTP/1.1" 200 9298
 INFO 2022-01-07 23:09:46,083 "GET /finance/list/ HTTP/1.1" 200 10355
 INFO 2022-01-07 23:09:51,257 "GET /finance/1/detail/ HTTP/1.1" 200 11415
+INFO 2025-10-24 17:11:19,704 Watching for file changes with StatReloader
+INFO 2025-10-24 17:14:32,357 Watching for file changes with StatReloader
+INFO 2025-10-24 17:14:48,053 "GET /?id=9b73eedb-dbbe-4267-af36-0fcead1571e4&vscodeBrowserReqId=1761326088027 HTTP/1.1" 302 0
+INFO 2025-10-24 17:14:48,074 "GET /accounts/login/?next=/%3Fid%3D9b73eedb-dbbe-4267-af36-0fcead1571e4%26vscodeBrowserReqId%3D1761326088027 HTTP/1.1" 200 4066
+INFO 2025-10-24 17:15:03,080 "GET / HTTP/1.1" 302 0
+INFO 2025-10-24 17:15:03,100 "GET /accounts/login/?next=/ HTTP/1.1" 200 3989
+INFO 2025-10-24 17:15:03,237 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 200 19736
+INFO 2025-10-24 17:15:03,237 "GET /static/dist/css/login-page.css HTTP/1.1" 200 9064
+INFO 2025-10-24 17:15:03,238 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 200 58582
+INFO 2025-10-24 17:15:03,243 "GET /static/dist/img/login.png HTTP/1.1" 200 445475
+INFO 2025-10-24 17:15:03,244 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 200 6454
+INFO 2025-10-24 17:15:03,254 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 200 88147
+INFO 2025-10-24 17:15:03,255 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 200 686718
+INFO 2025-10-24 17:15:03,303 "GET /static/dist/js/demo.js HTTP/1.1" 200 13042
+INFO 2025-10-24 17:15:03,306 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 200 13881
+INFO 2025-10-24 17:15:03,308 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 80704
+INFO 2025-10-24 17:15:03,308 "GET /static/dist/js/adminlte.js HTTP/1.1" 200 59416
+INFO 2025-10-24 17:15:03,319 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 200 42395
+INFO 2025-10-24 17:15:03,320 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 200 5253
+INFO 2025-10-24 17:15:03,321 "GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 79444
+INFO 2025-10-24 17:15:11,533 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-10-24 17:15:11,554 "GET / HTTP/1.1" 200 9298
+INFO 2025-10-24 17:15:11,604 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 200 25807
+INFO 2025-10-24 17:15:11,691 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 200 2042927
+INFO 2025-10-24 17:15:11,693 "GET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 13584
+INFO 2025-10-24 17:15:21,208 "GET /student/list HTTP/1.1" 200 9954
+INFO 2025-10-24 17:15:22,811 "GET /staff/list/ HTTP/1.1" 200 9695
+INFO 2025-10-24 17:15:24,569 "GET /finance/list/ HTTP/1.1" 200 10355
+INFO 2025-10-24 17:15:25,819 "GET /result/create/ HTTP/1.1" 200 10923
+INFO 2025-10-24 17:15:28,977 "GET /session/list/ HTTP/1.1" 200 12292
