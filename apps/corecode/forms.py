@@ -1,13 +1,7 @@
 from django import forms
 from django.forms import ModelForm, modelformset_factory
 
-from .models import (
-    AcademicSession,
-    AcademicTerm,
-    SiteConfig,
-    StudentClass,
-    Subject,
-)
+from .models import AcademicSession, AcademicTerm, SiteConfig, StudentClass, Subject
 
 SiteConfigForm = modelformset_factory(
     SiteConfig,

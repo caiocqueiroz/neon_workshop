@@ -15,13 +15,7 @@ from .forms import (
     StudentClassForm,
     SubjectForm,
 )
-from .models import (
-    AcademicSession,
-    AcademicTerm,
-    SiteConfig,
-    StudentClass,
-    Subject,
-)
+from .models import AcademicSession, AcademicTerm, SiteConfig, StudentClass, Subject
 
 
 class IndexView(LoginRequiredMixin, TemplateView):

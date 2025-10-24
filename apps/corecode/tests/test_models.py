@@ -1,11 +1,6 @@
 from django.test import TestCase
 
-from apps.corecode.models import (
-    AcademicSession,
-    AcademicTerm,
-    SiteConfig,
-    Subject,
-)
+from apps.corecode.models import AcademicSession, AcademicTerm, SiteConfig, Subject
 
 
 class SiteConfigTest(TestCase):
