@@ -3,7 +3,7 @@
 
 ## Criando uma aplicação e melhorando a cobertura de testes com um Agente usando o GitHub Copilot CLI e o GitHub Copilot Coding Agent.
 
-1. Crie um novo repositorio, crie uma nova branch chamada demo-<seu-nome-de-usuario>e copie o app Django a raiz do seu repositorio. o Codigo do App Django esta em caiocqueiroz/testcoveragent-django-app
+1. Clone esse repositorio localmente no seu computador e abra o Visual Studio Code a partir do repositorio clonado. Garanta que voce tenha o Python 3.13 + PIP instalado no seu computador.
 
 2. Create a virtual environment and inicie ele.
     ```
